@@ -11,17 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', 'PostController@index')->name('welcome');
+Route::get('posts/{post}', 'PostController@show')->name('post');
 
 Route::get('about', function() {
     return view('about');
 })->name('about');
-
-Route::get('posts/{post}', function($post) {
-    return view('post')->with('post', $post);
-})->name('post');
 
 Route::get('contact', function() {
     return view('contact');

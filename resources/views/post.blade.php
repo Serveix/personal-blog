@@ -4,9 +4,8 @@
 
     @include('includes.header', [
             'img' => asset('img/post-bg.jpg'),
-            'heading' => 'Man must explore, and this is exploration at its greatest',
-            'subheading' => 'Problems look mighty small from 150 miles up',
-            'type' => 'post'
+            'type' => 'post',
+            'post' => $post
         ])
 
     <!-- Post Content -->

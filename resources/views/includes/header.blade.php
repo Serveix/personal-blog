@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="{{ $type }}-heading">
-                    <h1>{{ $heading }}</h1>
-                    @if($type == 'site' || $type == 'page')<hr class="small">@endif
-                    <h2 class="subheading">{{ $subheading }}</h2>
-                    @if($type == 'post')<span class="meta">Publicado en August 24, 2014</span>@endif
+                    <h1>{{ $heading ?? $post->header }}</h1>
+                    @if(!isset($post))<hr class="small">@endif
+                    <h2 class="subheading">{{ $subheading ?? $post->subheader }}</h2>
+                    @if(isset($post))<span class="meta">Publicado {{ $post->created_at }}</span>@endif
                 </div>
             </div>
         </div>
