@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'PostController@index')->name('welcome');
 Route::get('posts/{slug}', 'PostController@show')->name('post');
 
@@ -24,4 +26,14 @@ Route::get('contact', function() {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
+
+Route::get('storage/images/posts/{path}', 'ImageController@show')
+    ->name('posts.image')
+    ->where('path', '(.*)');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('posts', 'Admin\PostController@index')->name('admin.posts.index');
+    Route::get('posts/new', 'Admin\PostController@create')->name('admin.posts.create');
+    Route::post('posts/new', 'Admin\PostController@store');
+});
