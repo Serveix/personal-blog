@@ -8,7 +8,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{ route('welcome') }}">Blog de Elí</a>
+            <a class="navbar-brand" href="index.html">Admin site de {{ env('APP_NAME') }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,10 +18,11 @@
                     <a href="{{ route('welcome') }}">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('about') }}">About</a>
+                    <a href="{{ route('admin.posts.index') }}">Posts</a>
                 </li>
                 <li>
-                    <a href="{{ route('contact') }}">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout').submit()">Logout</a>
+                    <form action="{{ route('logout') }}" id="logout" method="post">@csrf</form>
                 </li>
             </ul>
         </div>
