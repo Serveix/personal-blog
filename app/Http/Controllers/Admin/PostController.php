@@ -40,7 +40,7 @@ class PostController extends Controller
         $post->subheader = $request->subheader;
         $post->slug = self::slugify($request->header);
         $post->content = $request->body;
-        $post->image_path = $request->image->store('posts_images', 'images_local');
+        $post->image_path = $request->image->store('posts_images', 'public');
         $post->published = $request->published;
         $post->user()->associate(Auth::user());
         $post->save();

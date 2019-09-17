@@ -1,9 +1,9 @@
 @extends('layouts.app')
-
+@section('title', $post->header)
 @section('content')
 
     @include('includes.header', [
-            'img' => route('posts.image', ['path' => $post->image_path]),
+            'img' => asset('storage/' . $post->image_path),
             'type' => 'post',
             'post' => $post
         ])
@@ -13,8 +13,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-md-offset-1">
-                    <div class="fb-share-button" data-href="{{ route('post', ['slug' => $post->slug]) }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div style="margin-bottom:10px;" class="fb-share-button" data-href="{{ route('post', ['slug' => $post->slug]) }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                    <br><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <hr>
                     <div id="content"></div>
                 </div>
@@ -25,7 +25,16 @@
         </div>
     </article>
     <hr>
-    @include('includes.me')
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-1">
+                @include('includes.me')
+                <div style="margin-bottom:10px;" class="fb-share-button" data-href="{{ route('post', ['slug' => $post->slug]) }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                <br><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
     <hr>
 @endsection
 
