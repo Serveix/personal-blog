@@ -20,9 +20,10 @@
                 <li>
                     <a href="{{ route('about') }}">About</a>
                 </li>
-                <li>
+                {{-- TODO Contact form --}}
+                {{-- <li>
                     <a href="{{ route('contact') }}">Contact</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
