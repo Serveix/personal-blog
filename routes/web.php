@@ -26,7 +26,7 @@ Route::get('about', function() {
 //     return view('contact');
 // })->name('contact');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('home', 'HomeController@index')->name('home');
 
