@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PostController@index')->name('welcome');
 Route::get('posts/{slug}', 'PostController@show')->name('post');
+Route::post('subscribe', 'SubscriberController@store')->name('subscribe')->middleware('throttle:5,1');
 
 Route::get('about', function() {
     return view('about');

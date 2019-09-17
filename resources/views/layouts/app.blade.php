@@ -4,19 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="@yield('description')">
+    <meta name="author" content="@yield('author')">
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="@yield('keywords')">
 
-    <!-- CSRF Token -->
+    <meta property=”og:type” content="@yield('type')" />
+    <meta property=”og:title” content="@yield('title')" />
+    <meta property=”og:description” content="@yield('description')" />
+    <meta property=”og:image” content="@yield('image')" />
+    <meta property=”og:url” content="@yield('url')" />
+    <meta property=”og:site_name” content="{{ config('app.name', 'Blog de Eli') }}" />
+
+    <meta name=”twitter:title” content="@yield('title')">
+    <meta name=”twitter:description” content="@yield('description')">
+    <meta name=”twitter:image” content="@yield('image')">
+    <meta name=”twitter:site” content="@yield('twitter_username')">
+    <meta name=”twitter:creator” content="@yield('twitter_username')">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title') - {{ config('app.name', 'Blog de Eli') }}</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
@@ -62,8 +73,8 @@
          attribution=setup_tool
          page_id="418895604820044"
          theme_color="#333333"
-         logged_in_greeting="Hi! How can we help you?"
-         logged_out_greeting="Hi! How can we help you?">
+         logged_in_greeting="Hola! Cómo puedo ayudarte?"
+         logged_out_greeting="Hola! Cómo puedo ayudarte?">
     </div>
 </body>
 </html>

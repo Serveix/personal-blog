@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('title', 'Blog de Elí')
+@section('description', "Aprende a programar, encuentra tutoriales útiles y reviews de tecnología en español")
+@section('author', 'Eli')
+@section('keywords', 'tecnologia, programacion, reviews, podcast, ingenieria') {{-- TODO: Custom per post --}}
+@section('image', asset('storage/me.jpg'))
+@section('twitter_username', '@carloselilopez') {{-- TODO: Custom per user --}}
 @section('content')
 
     @include('includes.header', [
@@ -26,7 +32,7 @@
                 </div>
                 @endforeach
                 <hr>
-                
+
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
