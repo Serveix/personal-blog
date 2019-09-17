@@ -15,16 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PostController@index')->name('welcome');
 Route::get('posts/{slug}', 'PostController@show')->name('post');
+Route::post('subscribe', 'SubscriberController@store')->name('subscribe')->middleware('throttle:5,1');
 
 Route::get('about', function() {
     return view('about');
 })->name('about');
 
-Route::get('contact', function() {
-    return view('contact');
-})->name('contact');
+//TODO: Contact form
+// Route::get('contact', function() {
+//     return view('contact');
+// })->name('contact');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('home', 'HomeController@index')->name('home');
 
