@@ -9,18 +9,18 @@
     <meta name="robots" content="index, follow"/>
     <meta name="keywords" content="@yield('keywords')">
 
-    <meta property=”og:type” content="@yield('type')" />
-    <meta property=”og:title” content="@yield('title')" />
-    <meta property=”og:description” content="@yield('description')" />
-    <meta property=”og:image” content="@yield('image')" />
-    <meta property=”og:url” content="@yield('url')" />
-    <meta property=”og:site_name” content="{{ config('app.name', 'Blog de Eli') }}" />
+    <meta property="og:type" content="@yield('type')" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:image" content="@yield('image')" />
+    <meta property="og:url" content="@yield('url')" />
+    <meta property="og:site_name" content="{{ config('app.name', 'Blog de Eli') }}" />
 
-    <meta name=”twitter:title” content="@yield('title')">
-    <meta name=”twitter:description” content="@yield('description')">
-    <meta name=”twitter:image” content="@yield('image')">
-    <meta name=”twitter:site” content="@yield('twitter_username')">
-    <meta name=”twitter:creator” content="@yield('twitter_username')">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')">
+    <meta name="twitter:image" content="@yield('image')">
+    <meta name="twitter:site" content="@yield('twitter_username')">
+    <meta name="twitter:creator" content="@yield('twitter_username')">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
