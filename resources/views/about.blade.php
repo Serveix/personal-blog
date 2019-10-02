@@ -1,10 +1,11 @@
 @extends('layouts.app')
+@section('title', 'Sobre nosotros')
 @section('content')
     
     @include('includes.header', [
             'img' => asset('img/about-bg.jpg'),
-            'heading' => 'Sobre mi',
-            'subheading' => 'Lo que hago',
+            'heading' => 'Sobre Cheffy',
+            'subheading' => '¿Quiénes somos?',
             'type' => 'page'
         ])
 

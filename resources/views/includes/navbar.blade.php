@@ -8,17 +8,17 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{ route('welcome') }}">Blog de Elí</a>
+            <a class="navbar-brand" href="{{ route('welcome') }}">Blog de Cheffy</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{{ route('welcome') }}">Home</a>
+                    <a href="{{ route('welcome') }}">Inicio</a>
                 </li>
                 <li>
-                    <a href="{{ route('about') }}">About</a>
+                    <a href="{{ route('about') }}">Sobre Cheffy</a>
                 </li>
                 {{-- TODO Contact form --}}
                 {{-- <li>

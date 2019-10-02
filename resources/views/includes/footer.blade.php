@@ -29,7 +29,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Written with ❤️ & ☕ by Elí - 0.1.0</p>
+                <p class="copyright text-muted">Escrito ❤️ & ☕ por Cheffy - 1.0</p>
             </div>
         </div>
     </div>

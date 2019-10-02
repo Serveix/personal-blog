@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Blog de Elí')
+@section('title', 'Inicio')
 @section('description', "Aprende a programar, encuentra tutoriales útiles y reviews de tecnología en español")
 @section('author', 'Eli')
 @section('keywords', 'tecnologia, programacion, reviews, podcast, ingenieria') {{-- TODO: Custom per post --}}
@@ -36,7 +36,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="#">Antiguos Posts &rarr;</a>
                     </li>
                 </ul>
 
