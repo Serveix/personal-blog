@@ -18,7 +18,7 @@
                     <a href="{{ route('welcome') }}">Inicio</a>
                 </li>
                 <li>
-                    <a href="{{ route('about') }}">Sobre Cheffy</a>
+                    <a href="https://cheffy.mx/about" target="_blank">Sobre Cheffy</a>
                 </li>
                 {{-- TODO Contact form --}}
                 {{-- <li>
