@@ -3,7 +3,7 @@
 @section('content')
     
     @include('includes.header', [
-            'img' => asset('img/about-bg.jpg'),
+            'img' => asset('img/about-cheffy-bg.jpg'),
             'heading' => 'Sobre Cheffy',
             'subheading' => '¿Quiénes somos?',
             'type' => 'page'

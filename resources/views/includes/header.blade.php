@@ -1,6 +1,6 @@
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('{{ $img }}')">
+<header class="intro-header" style="background-image: linear-gradient(180deg,rgba(243,69,62,.5),rgba(177,47,45,.5)), url('{{ $img }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

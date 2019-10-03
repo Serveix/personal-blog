@@ -8,9 +8,9 @@
 @section('content')
 
     @include('includes.header', [
-        'img' => asset('img/home-bg.jpg'),
-        'heading' => 'Bienvenido',
-        'subheading' => 'Escribo sobre tecnología y programación',
+        'img' => asset('img/home-cheffy-bg.jpg'),
+        'heading' => 'Bienvenido a Cheffy',
+        'subheading' => 'Conoce todo sobre la aplicación.',
         'type' => 'site'
     ])
 
