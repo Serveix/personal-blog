@@ -15,10 +15,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{{ route('welcome') }}">Inicio</a>
+                    <a href="{{ route('welcome') }}"><i class="fa fa-home"></i> Inicio</a>
                 </li>
                 <li>
-                    <a href="https://cheffy.mx/about" target="_blank">Sobre Cheffy</a>
+                    <a href="https://cheffy.mx/about" target="_blank"><i class="fa fa-users"></i> Sobre Cheffy</a>
+                </li>
+                <li>
+                    <a href="https://cheffy.mx/" target="_blank"><i class="fa fa-hamburger"></i> Ir a Cheffy</a>
                 </li>
                 {{-- TODO Contact form --}}
                 {{-- <li>
