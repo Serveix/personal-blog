@@ -38,4 +38,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('posts', 'Admin\PostController@index')->name('admin.posts.index');
     Route::get('posts/new', 'Admin\PostController@create')->name('admin.posts.create');
     Route::post('posts/new', 'Admin\PostController@store');
+    Route::get('posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
+    Route::patch('posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
 });
