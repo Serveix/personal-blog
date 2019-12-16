@@ -41,6 +41,7 @@
                         <th>HEADING</th>
                         <th>SUBHEADING</th>
                         <th>PUBLISHED</th>
+                        <th>ACCIÓN</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -50,6 +51,11 @@
                             <td>{{ $post->header }}</td>
                             <td>{{ $post->subheader }}</td>
                             <td>{{ $post->published ? 'Yes' : 'No' }}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ route('admin.posts.edit', ['post' => $post->id]) }}">
+                                    Editar
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
